@@ -12,6 +12,12 @@ Fictional casino; synthetic data calibrated to public aggregates.
 
 **New here? Start with the [participant guide](GUIDE.md).** It covers the challenge, setup, the datasets, common mistakes and how to submit.
 
+## Executive dashboard
+
+Open [dashboard.html](dashboard.html) directly in a modern browser. It bundles the React app, fonts, charts and study data for offline use. [index.html](index.html) is the same build for static hosting.
+
+To develop or rebuild the app, see the [client instructions](client/README.md).
+
 🎰 **[View the example dashboard](https://tamu-datathon-org.github.io/dashboard-royale/example-dashboard.html)** (layout only; all values are placeholders)
 
 | | |

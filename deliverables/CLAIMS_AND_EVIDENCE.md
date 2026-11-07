@@ -19,7 +19,7 @@ All casino results refer to the fictional January 1–June 30, 2025 gaming-date 
 
 ## Reproduce the results
 
-From the repository root with Python 3.11 or newer, install `duckdb` and `numpy`. Run `python scripts/verify_semantics.py`, then run the six numbered Python scripts in `src/` in order. Scripts 01–05 write to `processed_data/`. Script 06 embeds the result data in `dashboard.html` and `index.html`. Open either directly in a modern browser.
+From the repository root with Python 3.11 or newer, install `duckdb` and `numpy`. Run `python scripts/verify_semantics.py`, then run scripts 01–05 in `src/` in order to regenerate `processed_data/`. Run `python scripts/export_react_data.py` to refresh the dashboard data. With Node.js 22.12 or newer, run `npm ci`, `npm run build`, and `npm run copy:html` from `client/`. Open either root HTML file directly in a modern browser.
 
 ## AI-Use Disclosure
 

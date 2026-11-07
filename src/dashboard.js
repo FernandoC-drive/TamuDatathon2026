@@ -9,6 +9,8 @@ const compact = new Intl.NumberFormat("en-US", {style: "currency", currency: "US
 const decimal = new Intl.NumberFormat("en-US", {maximumFractionDigits: 2});
 const dateFormat = new Intl.DateTimeFormat("en-US", {month: "short", day: "numeric", timeZone: "UTC"});
 const colors = {green: "#215848", gold: "#a77329", rust: "#a24b36", blue: "#416c83", gray: "#728078"};
+const chartFont = {family: "system-ui, sans-serif", size: 12};
+const chartText = "#45574e";
 const money = v => Number.isFinite(v) ? currency.format(v) : "—";
 const shortMoney = v => Number.isFinite(v) ? compact.format(v) : "—";
 const num = v => Number.isFinite(v) ? decimal.format(v) : "—";
@@ -103,20 +105,35 @@ function plot(id, labels, datasets, format = num, config = {}) {
     type, data: {labels, datasets}, plugins,
     options: {
       responsive: true, maintainAspectRatio: false, animation: false,
+      layout: {padding: {top: 4, right: 8}},
       interaction: {mode: "index", intersect: false},
       scales: {
-        x: {grid: {display: false}, ticks: {maxTicksLimit: 8, callback(index) {
+        x: {grid: {display: false}, border: {color: "#d6ded1"}, ticks: {
+          color: chartText, font: chartFont, padding: 6, maxTicksLimit: 8, maxRotation: 0, callback(index) {
           const label = labels[index];
           return /^\d{4}-\d\d-\d\d$/.test(label) ? dateText(label) : label;
         }}},
-        y: {beginAtZero, grid: {color: "#e8ebe3"}, ticks: {maxTicksLimit: 6, callback: format}}
+        y: {beginAtZero, grid: {color: "#e2e8de"}, border: {display: false}, ticks: {
+          color: chartText, font: chartFont, padding: 6, maxTicksLimit: 6, callback: format
+        }}
       },
       plugins: {
-        legend: {display: datasets.length > 1, position: "bottom", labels: {usePointStyle: true, boxWidth: 8}},
-        tooltip: {callbacks: {
-          label: context => context.dataset.label + " · " + format(context.parsed.y),
-          afterBody: items => note?.(items[0]?.label) ?? ""
-        }}
+        legend: {
+          display: datasets.length > 1, position: "bottom",
+          labels: {color: chartText, font: chartFont, padding: 14, usePointStyle: true, boxWidth: 8}
+        },
+        tooltip: {
+          backgroundColor: "#102a23", borderColor: "#b18b4c", borderWidth: 1,
+          titleColor: "#f3d497", bodyColor: "#f4f8f4", footerColor: "#d6eadb",
+          titleFont: {...chartFont, weight: "bold"}, bodyFont: chartFont,
+          cornerRadius: 8, padding: 12, titleMarginBottom: 7, bodySpacing: 5,
+          boxWidth: 8, boxHeight: 8, boxPadding: 5, multiKeyBackground: "#edf3e9",
+          usePointStyle: true,
+          callbacks: {
+            label: context => context.dataset.label + " · " + format(context.parsed.y),
+            afterBody: items => note?.(items[0]?.label) ?? ""
+          }
+        }
       }
     }
   }));

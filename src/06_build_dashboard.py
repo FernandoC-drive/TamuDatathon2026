@@ -1,15 +1,17 @@
-"""Embed processed evidence and compact date-grain facts in two standalone HTML files."""
+"""Collect dashboard data and optionally rebuild the legacy HTML edition."""
 
+import argparse
 import base64
 import hashlib
 import json
 import struct
 import zlib
+from pathlib import Path
 
 from pipeline_io import ON_FLOOR, OUTPUT, ROOT, connect, json_default, records
 
 
-def main():
+def collect_dashboard_data():
     with connect("prepared_daily_view", "machine_day", "calendar_day", "game_math") as connection:
         for name in ("q1_machines", "q1_placements", "q2_demand", "q2_zones", "q3_downtime",
                      "q4_players", "q4_guest_days", "q5_comps", "q5_tiers", "model_results"):
@@ -110,6 +112,14 @@ def main():
     for name in ("q2_evidence", "q3_evidence", "q4_evidence", "q5_evidence",
                  "model_evidence", "q6_budget_plan"):
         data[name] = json.loads((OUTPUT / f"{name}.json").read_text(encoding="utf-8"))
+    return data
+
+
+def main():
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("--output-dir", type=Path, default=ROOT / "legacy_dashboard")
+    args = parser.parse_args()
+    data = collect_dashboard_data()
 
     template_path = ROOT / "src" / "dashboard_template.html"
     vendor_path = template_path.parent / "vendor" / "chart.umd.js"
@@ -125,9 +135,10 @@ def main():
         .replace("/*__DASHBOARD_DATA__*/", payload.replace("<", "\\u003c"))
         .replace("/*__DASHBOARD_APP__*/", template_path.with_name("dashboard.js").read_text(encoding="utf-8"))
     )
+    args.output_dir.mkdir(parents=True, exist_ok=True)
     for filename in ("dashboard.html", "index.html"):
-        (ROOT / filename).write_text(html, encoding="utf-8", newline="\n")
-    print(f"Built dashboard.html and index.html with {len(data['floor']):,} embedded machine-days.")
+        (args.output_dir / filename).write_text(html, encoding="utf-8", newline="\n")
+    print(f"Built legacy HTML in {args.output_dir} with {len(data['floor']):,} embedded machine-days.")
 
 
 if __name__ == "__main__":
