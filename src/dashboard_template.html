@@ -1,0 +1,234 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light">
+  <title>The Gilded Ace | Dashboard Royale</title>
+  <style>
+    :root{--page:#f3f1e9;--panel:#fffefa;--ink:#162c25;--muted:#52625a;--green:#215848;--dark:#142e26;--gold:#e9c784;--line:#deded2;--wash:#e6efe8;--rust:#a24b36;--blue:#416c83}
+    *{box-sizing:border-box}
+    body{margin:0;background:var(--page);color:var(--ink);font:15px/1.55 system-ui,sans-serif}
+    h1,h2,h3,p{margin:0}
+    h1,h2,.brand-name{font-family:Georgia,serif;font-weight:400}
+    h1{font-size:clamp(2.65rem,5vw,4.65rem);line-height:1.03;letter-spacing:-.055em}
+    h2{font-size:clamp(1.75rem,3vw,2.25rem);letter-spacing:-.035em;line-height:1.15}
+    h3{font-size:1.02rem;line-height:1.35}
+    p+p{margin-top:.7rem}
+    a{color:var(--green)}
+    button,select,input{font:inherit}
+    button,select{cursor:pointer}
+    :focus-visible{outline:3px solid #a3631f;outline-offset:3px}
+    [hidden]{display:none!important}
+    .wrap{width:min(1280px,calc(100% - 64px));margin:auto}
+    .mast{background:#10271f;color:#fff;border-bottom:1px solid #476252}
+    .mast .wrap{height:64px;display:flex;align-items:center;justify-content:space-between;gap:16px}
+    .brand{display:flex;align-items:center;gap:12px}
+    .mark{width:36px;height:36px;border:1px solid #b79b61;border-radius:9px;color:var(--gold);display:grid;place-items:center;font-size:22px}
+    .brand-name{font-size:1.24rem;line-height:1.15}
+    .mast-note{color:#c6d6ca;font-size:.76rem;letter-spacing:.09em;text-transform:uppercase}
+    .hero{color:#fdfbf4;background:radial-gradient(ellipse at 88% 20%,#275646 0%,transparent 52%),var(--dark);padding:45px 0 65px}
+    .hero .wrap{display:grid;grid-template-columns:1.8fr 1fr;gap:42px;align-items:end}
+    .kicker{color:#6e552a;font-size:.72rem;font-weight:750;letter-spacing:.15em;text-transform:uppercase;margin-bottom:8px}
+    .hero .kicker{color:var(--gold)}
+    .hero p{color:#dbe7dc;max-width:640px;margin-top:16px}
+    .hero .signal{border-left:1px solid #8c9f8d;padding:4px 0 4px 20px;font-size:.91rem;color:#e4ede5}
+    .signal strong{display:block;color:var(--gold);margin-bottom:5px}
+    .controls{position:relative;margin-top:-27px;background:var(--panel);border:1px solid var(--line);border-radius:13px;padding:15px 18px;display:flex;align-items:end;flex-wrap:wrap;gap:10px 13px;box-shadow:0 8px 22px #25362a0b}
+    .control-label{display:block;font-size:.72rem;color:var(--muted);font-weight:700;margin-bottom:4px}
+    .controls .title{padding:0 12px 5px 0;font-weight:750;white-space:nowrap}
+    select,input[type=date],.button{min-height:38px;max-width:100%;border-radius:7px;border:1px solid #cbd2c9;background:white;color:var(--ink);padding:6px 10px}
+    .button{display:inline-flex;align-items:center;justify-content:center;text-decoration:none;color:var(--green);font-weight:700}
+    .button:hover{background:var(--wash)}
+    .button.dark{background:var(--green);border-color:var(--green);color:white}
+    .control-status{margin:0 0 6px auto;color:var(--muted);font-size:.8rem}
+    .tabs{display:flex;gap:5px;border-bottom:1px solid #cfd3c6;margin:22px 0 24px;overflow:auto}
+    .tab{background:transparent;border:0;border-bottom:3px solid transparent;color:var(--muted);padding:10px 16px;white-space:nowrap;font-weight:700}
+    .tab[aria-selected=true]{border-color:var(--green);color:var(--green)}
+    .section-title{display:flex;justify-content:space-between;gap:14px;align-items:end;margin-bottom:14px}
+    .sub{color:var(--muted);font-size:.87rem}
+    .section-title .sub,.panel h3+.sub{margin-top:5px}
+    .panel{border:1px solid var(--line);background:var(--panel);border-radius:12px;padding:17px 19px;min-width:0;margin-bottom:15px}
+    .panel-head{display:flex;align-items:start;justify-content:space-between;gap:12px;margin-bottom:10px}
+    .panel-head .kicker{margin-bottom:4px}
+    .grid-two{display:grid;grid-template-columns:minmax(0,1.55fr) minmax(0,1fr);gap:15px}
+    .grid-equal{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:15px}
+    .kpis{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;margin:0 0 16px}
+    .kpi{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:12px 15px;min-width:0}
+    .kpi.feature{background:#205141;color:white;border-color:#205141}
+    .kpi.feature .sub,.kpi.feature .metric-label{color:#dbe9df}
+    .metric-label{font-size:.79rem;font-weight:700;color:var(--muted)}
+    .metric-value{font:clamp(1.35rem,2.7vw,2.1rem)/1.3 Georgia,serif;letter-spacing:-.035em;white-space:nowrap}
+    .kpi .sub{font-size:.74rem}
+    #comp-kpis{grid-template-columns:repeat(2,minmax(0,1fr));margin-top:12px}
+    #down-kpis{grid-template-columns:repeat(3,minmax(0,1fr))}
+    .selectors{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:16px}
+    .selectors select{min-width:146px}
+    .chart{height:250px;position:relative;min-width:0}
+    .chart.tall{height:310px}
+    .chart.small{height:205px}
+    .table-scroll{overflow:auto}
+    table{border-collapse:collapse;width:100%;font-size:.83rem;white-space:nowrap}
+    th,td{border-bottom:1px solid #e8e9df;padding:8px 10px;text-align:left;font-variant-numeric:tabular-nums}
+    th{font-size:.72rem;letter-spacing:.035em;color:var(--muted);background:#f4f5ee}
+    tr:last-child td{border-bottom:0}
+    tbody tr:hover{background:#f5f7f0}
+    .num{text-align:right}
+    .table-link{border:0;background:none;color:var(--green);text-decoration:underline;text-underline-offset:3px;padding:0;font-weight:750}
+    .pill{background:#e7efe8;color:#255848;padding:3px 8px;border-radius:20px;font-weight:720;font-size:.7rem;display:inline-block}
+    .pill.warn{background:#f6e8ce;color:#714923}
+    .pill.inspect{background:#f7e5df;color:#863e2e}
+    .mini-note{background:#edf2e9;border-radius:7px;padding:9px 11px;margin:10px 0;color:#334f43;font-size:.82rem}
+    .rankings{display:grid;gap:7px;margin:10px 0}
+    .zone-button{display:grid;grid-template-columns:1fr auto;gap:2px 10px;width:100%;border:1px solid transparent;border-radius:7px;text-align:left;background:transparent;color:var(--ink);padding:4px 7px;font-size:.85rem}
+    .zone-button:hover,.zone-button[aria-pressed=true]{background:var(--wash);border-color:#c9d9ce}
+    .meter-track{height:5px;border-radius:10px;background:#e2e8de;grid-column:1/-1}
+    .meter-fill{height:100%;display:block;border-radius:10px;background:#447f65}
+    .action-card{border-top:4px solid #326954}
+    .action-price{font:1.95rem Georgia,serif;color:var(--green);white-space:nowrap}
+    .action-card dl{display:grid;grid-template-columns:auto 1fr;gap:4px 12px;font-size:.8rem;margin:10px 0}
+    .action-card dt{color:var(--muted)}
+    .action-card dd{margin:0;font-weight:700}
+    .action-card p{font-size:.86rem}
+    .action-card a{margin-top:12px}
+    .provenance{border-top:1px solid var(--line);margin-top:24px;padding:16px 0 25px;color:var(--muted);font-size:.78rem}
+    details summary{cursor:pointer;font-size:.84rem;font-weight:700;color:var(--green)}
+    details .table-scroll{margin-top:8px}
+    .empty{color:var(--muted);font-style:italic;font-size:.84rem}
+    @media(max-width:900px){.wrap{width:calc(100% - 36px)}.hero .wrap{grid-template-columns:1fr;gap:19px}.hero{padding:34px 0 60px}.grid-two,.grid-equal{grid-template-columns:1fr}.control-status{margin-left:0}.chart.tall{height:275px}}
+    @media(max-width:560px){.wrap{width:calc(100% - 24px)}.kpis,#down-kpis{grid-template-columns:repeat(2,minmax(0,1fr));gap:7px}.kpi,.panel{padding:11px}.mast-note{display:none}.tabs{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1px}.tab{padding:8px;font-size:.81rem;text-align:left;white-space:normal}.controls{padding:10px;gap:7px}.controls .title{width:100%}.section-title,.panel-head{align-items:start;flex-wrap:wrap}.selectors select{min-width:0}.chart{height:210px}.chart.tall{height:250px}.metric-value{font-size:1.32rem}}
+  </style>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.9/dist/chart.umd.js" integrity="__CHART_INTEGRITY__" crossorigin="anonymous"></script>
+  <script>
+  if (!window.Chart) {
+    /*__CHART_LICENSE__*/
+    /*__CHART_FALLBACK__*/
+  }
+  </script>
+</head>
+<body>
+  <header class="mast"><div class="wrap">
+    <div class="brand"><span class="mark" aria-hidden="true">♠</span><div class="brand-name">The Gilded Ace</div></div>
+    <span class="mast-note">Dashboard Royale · fictional casino</span>
+  </div></header>
+  <section class="hero"><div class="wrap">
+    <div><div class="kicker">Executive briefing · January–June 2025</div>
+      <h1>Luck, location<br>or a leak?</h1>
+      <p>Nine of the GM’s bottom ten sat in Back Forty. Compare floor time, demand and payout variance before committing July’s capital.</p>
+    </div>
+    <div class="signal"><strong>July decision</strong><span id="hero-plan"></span> Inspect the payout outlier and test wayfinding in Back Forty.</div>
+  </div></section>
+  <main class="wrap">
+    <div class="controls" aria-label="Global analysis period">
+      <div class="title">Gaming dates</div>
+      <label><span class="control-label">Start</span><input type="date" id="start-date" min="2025-01-01" max="2025-06-30" value="2025-01-01"></label>
+      <label><span class="control-label">End</span><input type="date" id="end-date" min="2025-01-01" max="2025-06-30" value="2025-06-30"></label>
+      <button class="button" type="button" id="reset-dates">Full period</button>
+      <div class="control-status" id="date-status" role="status"></div>
+    </div>
+    <div class="tabs" role="tablist" aria-label="Dashboard sections">
+      <button id="tab-floor" class="tab" role="tab" aria-controls="floor" aria-selected="true" data-tab="floor">Floor &amp; operations</button>
+      <button id="tab-guests" class="tab" role="tab" aria-controls="guests" aria-selected="false" tabindex="-1" data-tab="guests">Guests &amp; comps</button>
+      <button id="tab-model" class="tab" role="tab" aria-controls="model" aria-selected="false" tabindex="-1" data-tab="model">Forecast validation</button>
+      <button id="tab-budget" class="tab" role="tab" aria-controls="budget" aria-selected="false" tabindex="-1" data-tab="budget">July action plan</button>
+    </div>
+    <section id="floor" role="tabpanel" aria-labelledby="tab-floor">
+      <div class="section-title"><div><div class="kicker">Q1–Q3 · Floor performance</div><h2>Separate the machine from its placement</h2></div></div>
+      <div class="selectors" aria-label="Floor drill-down">
+        <label><span class="control-label">Zone</span><select id="zone"></select></label>
+        <label><span class="control-label">Bank</span><select id="bank"></select></label>
+        <label><span class="control-label">Machine</span><select id="machine"></select></label>
+        <label><span class="control-label">Machine table</span><select id="rank-mode"><option value="gm">GM bottom 10</option><option value="leads">Machine-specific leads</option><option value="screen">All diagnostic flags</option><option value="all">All matching machines</option></select></label>
+      </div>
+      <div id="floor-kpis" class="kpis" aria-live="polite"></div>
+      <div class="grid-two">
+        <article class="panel">
+          <div class="panel-head"><div><h3>Gaming results by day</h3><p class="sub">Selected floor scope. Hover a date to see any scheduled event.</p></div>
+            <label><span class="control-label">Measure</span><select id="floor-measure"><option value="coin">Wagers</option><option value="win">House win and theo</option><option value="hold">Hold</option><option value="availability">Availability</option></select></label>
+          </div>
+          <div class="chart"><canvas id="floor-trend" role="img" aria-label="Daily gaming results"></canvas></div>
+        </article>
+        <article class="panel"><h3>Wagers per available hour</h3><p class="sub">Compare all zones in the selected period. Select a zone to drill down.</p><div class="rankings" id="zone-ranking"></div></article>
+      </div>
+      <article id="inspection-evidence" class="panel" tabindex="-1">
+        <div class="panel-head"><div><div class="kicker">Q1 · Machine diagnostics</div><h3>GM ranking and diagnostic leads</h3><p class="sub">Rank and screening labels use the January–June study. Exposure, hold, z and financial metrics recalculate for your selection.</p></div></div>
+        <div id="machine-note" class="mini-note"></div>
+        <div id="machine-table" class="table-scroll"></div>
+        <div id="machine-placements"></div>
+        <details><summary>Compare all four recorded moves</summary><div id="moves-table" class="table-scroll"></div></details>
+        <details><summary>How machines were screened</summary><p class="sub">Short exposure means under 75% of full-window scheduled hours. High downtime means under 98% availability. Weak location compares same-game zone peers with same-game peers elsewhere on the same dates. The demand screen requires theo/hour below 85% of same-game zone peers and bank peers, with at least 30 matched days and 80% hour coverage. Payout z uses published payout variance and squared bet exposure. The full-floor inspection cutoff is |z| ≥ 3.773.</p></details>
+      </article>
+      <div class="grid-two">
+        <article id="wayfinding-evidence" class="panel" tabindex="-1"><div class="kicker">Q2 · Internal access</div><h3>Back Forty during the walkway closure</h3>
+          <p class="sub">Matched 35-day windows around the March 3–April 6 closure. This comparison uses the fixed study windows.</p>
+          <div class="chart small"><canvas id="closure-chart" role="img" aria-label="Back Forty and other zone wagering rates before, during and after the closure"></canvas></div>
+          <div class="table-scroll" id="closure-table"></div>
+        </article>
+        <article class="panel"><div class="kicker">Q2 · Demand context</div><h3>Traffic and calendar effects</h3><p class="sub">Entries per valid sensor hour, filtered by date and zone. Entries can include repeat crossings.</p>
+          <div class="chart small"><canvas id="traffic-chart" role="img" aria-label="Daily entries per valid sensor hour"></canvas></div>
+          <div id="traffic-note" class="mini-note"></div>
+          <div id="events-table"></div>
+        </article>
+      </div>
+      <article class="panel"><div class="kicker">Q2 · Monthly demand</div><h3>Compare months on equal exposure</h3><p class="sub">Wagers per selected gaming date include days with no play in the scope. Hourly rates divide by available machine-hours. The published Las Vegas and Missouri series are retrospective context.</p>
+        <div id="monthly-demand" class="table-scroll"></div><div id="macro-note" class="mini-note"></div>
+      </article>
+      <article class="panel">
+        <div class="panel-head"><div><div class="kicker">Q3 · Downtime</div><h3>Measured outages and modeled lost play</h3><p class="sub">Uses fully available hours at the same local hour and weekend status to estimate play during outages. Dollar estimates are gross opportunities.</p></div>
+          <label><span class="control-label">Break down by</span><select id="down-group"><option value="shift">Shift</option><option value="manufacturer">Manufacturer</option><option value="event_type">Ticket category</option><option value="local_weekday">Weekday</option><option value="techs">Technicians on duty</option></select></label>
+        </div>
+        <div id="down-kpis" class="kpis"></div><div class="table-scroll" id="down-table"></div>
+        <details><summary>Staffing context for the full study</summary><div class="table-scroll" id="staffing-table"></div></details>
+      </article>
+    </section>
+    <section id="guests" role="tabpanel" aria-labelledby="tab-guests" hidden>
+      <div class="section-title"><div><div class="kicker">Q4–Q5 · Guest economics</div><h2>Tracked play and loyalty cost</h2><p class="sub">Guest filters use opening tier and player demographics from the loyalty register.</p></div></div>
+      <div class="selectors">
+        <label><span class="control-label">Opening tier</span><select id="tier"></select></label>
+        <label><span class="control-label">Age band</span><select id="age"></select></label>
+        <label><span class="control-label">Home region</span><select id="region"></select></label>
+      </div>
+      <div id="guest-kpis" class="kpis" aria-live="polite"></div>
+      <div class="grid-two">
+        <article class="panel"><h3>Carded play in your segment</h3><p class="sub">Daily stakes and payouts on observed carded sessions.</p><div class="chart"><canvas id="guest-chart" role="img" aria-label="Guest segment daily stakes and payouts"></canvas></div></article>
+        <article class="panel"><h3>Carded and uncarded floor totals</h3><p class="sub">Property-wide meters for the selected dates. Demographics are available for carded play.</p><div id="carded-table" class="table-scroll"></div></article>
+      </div>
+      <div class="grid-two">
+        <article class="panel"><div class="kicker">Q4 · Concentration</div><h3>How concentrated was carded play?</h3><p class="sub">Wagering guests in the selected dates and segment. Curves use wagers and positive net losses.</p><div class="chart"><canvas id="lorenz-chart" role="img" aria-label="Lorenz curves for carded wagering and positive net losses"></canvas></div><div id="concentration-note" class="mini-note" role="status"></div></article>
+        <article class="panel"><h3>Top carded guest shares</h3><p class="sub">Groups ranked separately by wagers and by net loss. Net house win includes the losses and gains of all wagering guests in its denominator.</p><div id="concentration-table" class="table-scroll"></div></article>
+      </div>
+      <div class="grid-two">
+        <article class="panel"><div class="kicker">Q5 · Reinvestment</div><h3>Property comp costs and redemptions</h3><p class="sub">All property redemptions in the selected dates. Comp costs are already included in POS cost of goods.</p>
+          <div class="kpis" id="comp-kpis"></div><div class="chart"><canvas id="comp-chart" role="img" aria-label="Comp reinvestment by month"></canvas></div>
+          <div class="table-scroll" id="comp-table"></div>
+        </article>
+        <article class="panel"><h3>Points per dollar of menu value</h3><p class="sub">Tier at redemption. All ages and regions. The vertical break marks May 1.</p><div class="chart"><canvas id="tier-chart" role="img" aria-label="Daily loyalty redemption prices by tier"></canvas></div><div class="table-scroll" id="pricing-table"></div></article>
+      </div>
+    </section>
+    <section id="model" role="tabpanel" aria-labelledby="tab-model" hidden>
+      <div class="section-title"><div><div class="kicker">Model validation · Daily coin-in</div><h2>Forecast the busy days before they arrive</h2><p class="sub">January–April training fit and a frozen May–June holdout. The date control changes the chart view. Scorecards use all 61 holdout days.</p></div></div>
+      <div id="model-kpis" class="kpis"></div>
+      <article class="panel"><h3>Actuals, two baselines and the calendar model</h3><p class="sub">Shaded dates are the holdout. Click legend labels to show or hide series.</p>
+        <div class="chart tall"><canvas id="validation-chart" role="img" aria-label="Daily actual wagers and model validation predictions"></canvas></div>
+        <div id="model-table" class="table-scroll"></div>
+      </article>
+      <div class="grid-equal">
+        <article class="panel"><h3>What the model knew</h3><p class="sub">Day of week, scheduled gaming-day duration and announced event categories. Ridge strength was selected with February, March and April forward folds. Training ended April 30. The full holdout forecast was frozen at May 1, so the May 26 announcement of Locals Appreciation Week was excluded. Inputs use no holdout wagers, future repair records, weather observations or later-published tourism data.</p></article>
+        <article class="panel"><h3>July 1–30 staffing signal</h3><p id="july-decision" class="sub"></p><div class="chart small"><canvas id="july-chart" role="img" aria-label="Average July forecast by weekday"></canvas></div></article>
+      </div>
+    </section>
+    <section id="budget" role="tabpanel" aria-labelledby="tab-budget" hidden>
+      <div class="section-title"><div><div class="kicker">Q6 · July 1–30, 2025</div><h2>Fund two targeted actions</h2><p class="sub">Price each action as quantity × (unit cost + daily recurring cost × max(0, 30 − lead days)). Net scenarios deduct the full catalog cost. Historical date filters leave this plan fixed.</p></div></div>
+      <div id="budget-kpis" class="kpis"></div>
+      <div class="grid-equal" id="budget-actions"></div>
+      <article class="panel"><h3>Use the existing roster for peak periods</h3><p class="sub">Pre-stage tools and align existing repair coverage with Friday–Sunday peaks. Swing had the largest modeled theo loss in the study, but staffing associations and the repair queue do not establish a payback for a new technician package. Keep the remaining budget available.</p></article>
+    </section>
+    <footer class="provenance">Dashboard Royale · Synthetic casino release 0.9.0-draft · Gaming days run 06:00 to 06:00 Las Vegas time · Source logic and limitations are documented in the Claims &amp; Evidence appendix.</footer>
+  </main>
+  <noscript>Enable JavaScript to use the date filters and charts.</noscript>
+  <script>
+  const DASHBOARD_DATA = /*__DASHBOARD_DATA__*/;
+  /*__DASHBOARD_APP__*/
+  </script>
+</body>
+</html>

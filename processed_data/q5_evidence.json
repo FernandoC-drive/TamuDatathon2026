@@ -1,0 +1,175 @@
+{
+  "monthly": [
+    {
+      "period": "2025-01",
+      "comp_cost_usd": 28750.3,
+      "redemptions": 9171,
+      "points_earned": 27228104,
+      "points_redeemed": 1433623,
+      "cost_per_carded_theo": 0.011141019320720534,
+      "cost_per_carded_coin_in": 0.0010546374562553785
+    },
+    {
+      "period": "2025-02",
+      "comp_cost_usd": 29854.3,
+      "redemptions": 9292,
+      "points_earned": 26113804,
+      "points_redeemed": 1411208,
+      "cost_per_carded_theo": 0.01203511341401758,
+      "cost_per_carded_coin_in": 0.0011419307073434204
+    },
+    {
+      "period": "2025-03",
+      "comp_cost_usd": 33255.5,
+      "redemptions": 10430,
+      "points_earned": 28860527,
+      "points_redeemed": 1531314,
+      "cost_per_carded_theo": 0.012166692780394386,
+      "cost_per_carded_coin_in": 0.0011510000995234107
+    },
+    {
+      "period": "2025-04",
+      "comp_cost_usd": 31390.3,
+      "redemptions": 9702,
+      "points_earned": 26745016,
+      "points_redeemed": 1404060,
+      "cost_per_carded_theo": 0.012416186788699045,
+      "cost_per_carded_coin_in": 0.001172365901208
+    },
+    {
+      "period": "2025-05",
+      "comp_cost_usd": 34446.1,
+      "redemptions": 10629,
+      "points_earned": 28146806,
+      "points_redeemed": 719172,
+      "cost_per_carded_theo": 0.01295731544294406,
+      "cost_per_carded_coin_in": 0.0012223917753876145
+    },
+    {
+      "period": "2025-06",
+      "comp_cost_usd": 32972.8,
+      "redemptions": 10137,
+      "points_earned": 26522943,
+      "points_redeemed": 673602,
+      "cost_per_carded_theo": 0.013168507574760065,
+      "cost_per_carded_coin_in": 0.0012417641324639524
+    },
+    {
+      "period": "All",
+      "comp_cost_usd": 190669.3,
+      "redemptions": 59361,
+      "points_earned": 163617200,
+      "points_redeemed": 7172979,
+      "cost_per_carded_theo": 0.01231314444068925,
+      "cost_per_carded_coin_in": 0.0011640026356200576
+    }
+  ],
+  "windows": [
+    {
+      "period": "Jan-Apr",
+      "comp_cost_per_day": 1027.0866666666666,
+      "cost_per_carded_theo": 0.011939768715571236,
+      "redemptions_per_day": 321.625
+    },
+    {
+      "period": "May-Jun",
+      "comp_cost_per_day": 1105.2278688524589,
+      "cost_per_carded_theo": 0.01305975088239808,
+      "redemptions_per_day": 340.42622950819674
+    }
+  ],
+  "pricing": [
+    {
+      "tier": "Base",
+      "period": "Jan-Apr",
+      "first_redemption": "2025-01-01",
+      "last_redemption": "2025-04-30",
+      "redemptions": 16190,
+      "cost_usd": 51796.9,
+      "min_points_per_face_dollar": 15.0,
+      "max_points_per_face_dollar": 15.11111111111111,
+      "points_per_face_dollar": 15.019293209478347
+    },
+    {
+      "tier": "Base",
+      "period": "May-Jun",
+      "first_redemption": "2025-05-01",
+      "last_redemption": "2025-06-30",
+      "redemptions": 6295,
+      "cost_usd": 21718.5,
+      "min_points_per_face_dollar": 7.0,
+      "max_points_per_face_dollar": 7.111111111111111,
+      "points_per_face_dollar": 7.016345554632323
+    },
+    {
+      "tier": "Gold",
+      "period": "Jan-Apr",
+      "first_redemption": "2025-01-01",
+      "last_redemption": "2025-04-30",
+      "redemptions": 19987,
+      "cost_usd": 63716.4,
+      "min_points_per_face_dollar": 12.0,
+      "max_points_per_face_dollar": 12.0,
+      "points_per_face_dollar": 12.0
+    },
+    {
+      "tier": "Gold",
+      "period": "May-Jun",
+      "first_redemption": "2025-05-01",
+      "last_redemption": "2025-06-30",
+      "redemptions": 9807,
+      "cost_usd": 31140.2,
+      "min_points_per_face_dollar": 5.611111111111111,
+      "max_points_per_face_dollar": 5.777777777777778,
+      "points_per_face_dollar": 5.6487132245816465
+    },
+    {
+      "tier": "Platinum",
+      "period": "Jan-Apr",
+      "first_redemption": "2025-01-01",
+      "last_redemption": "2025-04-30",
+      "redemptions": 2418,
+      "cost_usd": 7737.1,
+      "min_points_per_face_dollar": 9.0,
+      "max_points_per_face_dollar": 9.11111111111111,
+      "points_per_face_dollar": 9.021199558267103
+    },
+    {
+      "tier": "Platinum",
+      "period": "May-Jun",
+      "first_redemption": "2025-05-01",
+      "last_redemption": "2025-06-30",
+      "redemptions": 4664,
+      "cost_usd": 14560.2,
+      "min_points_per_face_dollar": 4.206896551724138,
+      "max_points_per_face_dollar": 4.363636363636363,
+      "points_per_face_dollar": 4.238082074257662
+    }
+  ],
+  "breaks": [
+    {
+      "tier": "Base",
+      "gaming_date": "2025-05-01",
+      "change": -8.00279423369098
+    },
+    {
+      "tier": "Gold",
+      "gaming_date": "2025-05-01",
+      "change": -6.351438994730442
+    },
+    {
+      "tier": "Platinum",
+      "gaming_date": "2025-05-01",
+      "change": -4.783144024742061
+    }
+  ],
+  "item_checks": {
+    "matched_tier_benefits": 30,
+    "nonoverlapping": 30
+  },
+  "contribution": {
+    "card_linked_comp_cost_usd": 190669.3,
+    "linked_pos_cogs_usd": 591346.7,
+    "tracked_contribution_usd": 16329196.9
+  }
+}

@@ -1,0 +1,231 @@
+{
+  "totals": {
+    "seconds": 18075884.0,
+    "hours": 5021.078888888889,
+    "lost_coin_in_usd": 1085318.220313454,
+    "lost_theo_usd": 101210.49812025158
+  },
+  "breakdown": [
+    {
+      "shift": "day",
+      "techs": 0,
+      "event_type": "fault_repair",
+      "phase": "waiting for work",
+      "hours": 127.25944444444444,
+      "lost_coin_in_usd": 25120.28407507758,
+      "lost_theo_usd": 2364.258131527598
+    },
+    {
+      "shift": "day",
+      "techs": 0,
+      "event_type": "fault_repair",
+      "phase": "repair",
+      "hours": 36.3375,
+      "lost_coin_in_usd": 3876.838879196124,
+      "lost_theo_usd": 382.6555497834689
+    },
+    {
+      "shift": "day",
+      "techs": 1,
+      "event_type": "fault_repair",
+      "phase": "repair",
+      "hours": 339.49666666666667,
+      "lost_coin_in_usd": 54648.25420820859,
+      "lost_theo_usd": 5034.858869503979
+    },
+    {
+      "shift": "day",
+      "techs": 1,
+      "event_type": "fault_repair",
+      "phase": "waiting for work",
+      "hours": 184.72916666666666,
+      "lost_coin_in_usd": 36924.785128288284,
+      "lost_theo_usd": 3397.161164708074
+    },
+    {
+      "shift": "day",
+      "techs": 1,
+      "event_type": "install",
+      "phase": "other",
+      "hours": 6.0,
+      "lost_coin_in_usd": 469.6470588235294,
+      "lost_theo_usd": 23.482352941176472
+    },
+    {
+      "shift": "day",
+      "techs": 1,
+      "event_type": "move",
+      "phase": "other",
+      "hours": 3.0,
+      "lost_coin_in_usd": 193.15384615384613,
+      "lost_theo_usd": 15.452307692307691
+    },
+    {
+      "shift": "day",
+      "techs": 1,
+      "event_type": "scheduled_maintenance",
+      "phase": "other",
+      "hours": 3.0,
+      "lost_coin_in_usd": 84.1796875,
+      "lost_theo_usd": 8.41796875
+    },
+    {
+      "shift": "day",
+      "techs": 2,
+      "event_type": "fault_repair",
+      "phase": "repair",
+      "hours": 416.7913888888889,
+      "lost_coin_in_usd": 62833.02708082129,
+      "lost_theo_usd": 5904.584895683114
+    },
+    {
+      "shift": "day",
+      "techs": 2,
+      "event_type": "install",
+      "phase": "other",
+      "hours": 54.0,
+      "lost_coin_in_usd": 11278.542176704585,
+      "lost_theo_usd": 1003.3177846674578
+    },
+    {
+      "shift": "day",
+      "techs": 2,
+      "event_type": "fault_repair",
+      "phase": "waiting for work",
+      "hours": 26.183611111111112,
+      "lost_coin_in_usd": 3142.0037087850997,
+      "lost_theo_usd": 286.7650818833054
+    },
+    {
+      "shift": "day",
+      "techs": 2,
+      "event_type": "move",
+      "phase": "other",
+      "hours": 9.0,
+      "lost_coin_in_usd": 440.149437287718,
+      "lost_theo_usd": 51.077932474526165
+    },
+    {
+      "shift": "day",
+      "techs": 2,
+      "event_type": "scheduled_maintenance",
+      "phase": "other",
+      "hours": 6.0,
+      "lost_coin_in_usd": 434.232421875,
+      "lost_theo_usd": 32.07875
+    },
+    {
+      "shift": "grave",
+      "techs": 1,
+      "event_type": "fault_repair",
+      "phase": "repair",
+      "hours": 1249.4802777777777,
+      "lost_coin_in_usd": 222406.93591670407,
+      "lost_theo_usd": 20779.407783818868
+    },
+    {
+      "shift": "grave",
+      "techs": 1,
+      "event_type": "fault_repair",
+      "phase": "waiting for work",
+      "hours": 671.2877777777778,
+      "lost_coin_in_usd": 93540.42902810597,
+      "lost_theo_usd": 8640.368683967823
+    },
+    {
+      "shift": "grave",
+      "techs": 1,
+      "event_type": "scheduled_maintenance",
+      "phase": "other",
+      "hours": 6.0,
+      "lost_coin_in_usd": 325.27690972222223,
+      "lost_theo_usd": 24.71957465277778
+    },
+    {
+      "shift": "swing",
+      "techs": 1,
+      "event_type": "fault_repair",
+      "phase": "repair",
+      "hours": 95.62916666666666,
+      "lost_coin_in_usd": 29911.581533716322,
+      "lost_theo_usd": 2613.013892766792
+    },
+    {
+      "shift": "swing",
+      "techs": 1,
+      "event_type": "fault_repair",
+      "phase": "waiting for work",
+      "hours": 80.03944444444444,
+      "lost_coin_in_usd": 26036.674519935714,
+      "lost_theo_usd": 2489.2805590004427
+    },
+    {
+      "shift": "swing",
+      "techs": 2,
+      "event_type": "fault_repair",
+      "phase": "repair",
+      "hours": 1418.5205555555556,
+      "lost_coin_in_usd": 419709.6129429361,
+      "lost_theo_usd": 39530.28308129889
+    },
+    {
+      "shift": "swing",
+      "techs": 2,
+      "event_type": "fault_repair",
+      "phase": "waiting for work",
+      "hours": 288.3238888888889,
+      "lost_coin_in_usd": 93942.61175361338,
+      "lost_theo_usd": 8629.313755130781
+    }
+  ],
+  "staffing": [
+    {
+      "shift": "day",
+      "techs": 0,
+      "staffed_shifts": 12,
+      "downtime_hours_per_shift": 13.633078703703703,
+      "lost_theo_usd": 2746.9136813110667,
+      "queue_theo_usd": 2364.2581315275975
+    },
+    {
+      "shift": "day",
+      "techs": 1,
+      "staffed_shifts": 70,
+      "downtime_hours_per_shift": 7.660369047619047,
+      "lost_theo_usd": 8479.372663595535,
+      "queue_theo_usd": 3397.1611647080745
+    },
+    {
+      "shift": "day",
+      "techs": 2,
+      "staffed_shifts": 99,
+      "downtime_hours_per_shift": 5.1714646464646465,
+      "lost_theo_usd": 7277.824444708407,
+      "queue_theo_usd": 286.7650818833054
+    },
+    {
+      "shift": "grave",
+      "techs": 1,
+      "staffed_shifts": 181,
+      "downtime_hours_per_shift": 10.645127378759977,
+      "lost_theo_usd": 29444.496042439496,
+      "queue_theo_usd": 8640.368683967827
+    },
+    {
+      "shift": "swing",
+      "techs": 1,
+      "staffed_shifts": 14,
+      "downtime_hours_per_shift": 12.547757936507939,
+      "lost_theo_usd": 5102.294451767235,
+      "queue_theo_usd": 2489.2805590004427
+    },
+    {
+      "shift": "swing",
+      "techs": 2,
+      "staffed_shifts": 167,
+      "downtime_hours_per_shift": 10.220625415834999,
+      "lost_theo_usd": 48159.59683642968,
+      "queue_theo_usd": 8629.31375513078
+    }
+  ]
+}

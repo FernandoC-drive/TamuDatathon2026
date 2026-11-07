@@ -1,0 +1,198 @@
+{
+  "monthly": [
+    {
+      "month": "2025-01",
+      "days": 31,
+      "coin_in_usd": 41676918.15,
+      "coin_in_per_day": 1344416.7145161289,
+      "theo_usd": 3946193.976,
+      "house_win_usd": 3936193.75,
+      "coin_in_per_available_hour": 187.4522991462471,
+      "mean_max_temp_c": 13.76774193548387,
+      "entries_per_valid_hour": 87.04975798644725,
+      "vegas_visitors_per_day": 107800.0,
+      "mo_handle_matched_categories": 1259851402.58,
+      "mo_hold_matched_categories": 0.09483199894474335
+    },
+    {
+      "month": "2025-02",
+      "days": 28,
+      "coin_in_usd": 39577371.95,
+      "coin_in_per_day": 1413477.5696428572,
+      "theo_usd": 3755949.8405,
+      "house_win_usd": 3889478.3,
+      "coin_in_per_available_hour": 197.0714675206909,
+      "mean_max_temp_c": 19.789285714285715,
+      "entries_per_valid_hour": 91.25155213016485,
+      "vegas_visitors_per_day": 106189.285714,
+      "mo_handle_matched_categories": 1316611981.66,
+      "mo_hold_matched_categories": 0.09652142890251873
+    },
+    {
+      "month": "2025-03",
+      "days": 31,
+      "coin_in_usd": 43647425.45,
+      "coin_in_per_day": 1407981.4661290324,
+      "theo_usd": 4132019.442,
+      "house_win_usd": 4108214.25,
+      "coin_in_per_available_hour": 195.32824550602243,
+      "mean_max_temp_c": 21.425806451612903,
+      "entries_per_valid_hour": 90.41823108186568,
+      "vegas_visitors_per_day": 109251.612903,
+      "mo_handle_matched_categories": 1582400673.01,
+      "mo_hold_matched_categories": 0.09685007326145868
+    },
+    {
+      "month": "2025-04",
+      "days": 30,
+      "coin_in_usd": 41288570.55,
+      "coin_in_per_day": 1376285.6849999998,
+      "theo_usd": 3899006.3145,
+      "house_win_usd": 3864536.65,
+      "coin_in_per_available_hour": 186.82194164103095,
+      "mean_max_temp_c": 26.706666666666667,
+      "entries_per_valid_hour": 87.5,
+      "vegas_visitors_per_day": 111196.666667,
+      "mo_handle_matched_categories": 1466688817.65,
+      "mo_hold_matched_categories": 0.09597194221848235
+    },
+    {
+      "month": "2025-05",
+      "days": 31,
+      "coin_in_usd": 42984383.3,
+      "coin_in_per_day": 1386593.0096774192,
+      "theo_usd": 4060078.617,
+      "house_win_usd": 4023535.85,
+      "coin_in_per_available_hour": 188.41669128449473,
+      "mean_max_temp_c": 32.02903225806452,
+      "entries_per_valid_hour": 87.14152410575427,
+      "vegas_visitors_per_day": 110280.645161,
+      "mo_handle_matched_categories": 1565643200.68,
+      "mo_hold_matched_categories": 0.09647232964981983
+    },
+    {
+      "month": "2025-06",
+      "days": 30,
+      "coin_in_usd": 39730549.85,
+      "coin_in_per_day": 1324351.6616666666,
+      "theo_usd": 3752116.2885,
+      "house_win_usd": 3816196.3,
+      "coin_in_per_available_hour": 179.67093924129418,
+      "mean_max_temp_c": 38.626666666666665,
+      "entries_per_valid_hour": 83.97601439136518,
+      "vegas_visitors_per_day": 103160.0,
+      "mo_handle_matched_categories": 1433820840.31,
+      "mo_hold_matched_categories": 0.09713250762200451
+    }
+  ],
+  "closure": [
+    {
+      "phase": "Before",
+      "area": "Back Forty",
+      "coin_in_per_available_hour": 135.4789785848323,
+      "entries_per_valid_hour": 25.296163069544363,
+      "sensor_coverage": 0.9928571428571429
+    },
+    {
+      "phase": "Before",
+      "area": "Other zones",
+      "coin_in_per_available_hour": 206.10217165803004,
+      "entries_per_valid_hour": 100.95241903238704,
+      "sensor_coverage": 0.9924603174603175
+    },
+    {
+      "phase": "During",
+      "area": "Back Forty",
+      "coin_in_per_available_hour": 96.25166491514534,
+      "entries_per_valid_hour": 17.610778443113773,
+      "sensor_coverage": 0.9952324195470799
+    },
+    {
+      "phase": "During",
+      "area": "Other zones",
+      "coin_in_per_available_hour": 210.7119191135936,
+      "entries_per_valid_hour": 102.15496900619875,
+      "sensor_coverage": 0.9934445768772348
+    },
+    {
+      "phase": "After",
+      "area": "Back Forty",
+      "coin_in_per_available_hour": 125.915223384176,
+      "entries_per_valid_hour": 23.11377245508982,
+      "sensor_coverage": 0.9940476190476191
+    },
+    {
+      "phase": "After",
+      "area": "Other zones",
+      "coin_in_per_available_hour": 197.35672680984726,
+      "entries_per_valid_hour": 97.49356136820926,
+      "sensor_coverage": 0.9861111111111112
+    }
+  ],
+  "events": [
+    {
+      "event_id": "EV-CES25",
+      "name": "CES",
+      "start_date": "2025-01-07",
+      "end_date": "2025-01-10",
+      "matched_days": 4,
+      "difference": 0.01915600514966398
+    },
+    {
+      "event_id": "EV-SB59",
+      "name": "Super Bowl LIX weekend",
+      "start_date": "2025-02-07",
+      "end_date": "2025-02-09",
+      "matched_days": 3,
+      "difference": 0.22481346120692125
+    },
+    {
+      "event_id": "EV-P-TOURN",
+      "name": "Gilded Ace Winter Slot Tournament",
+      "start_date": "2025-02-21",
+      "end_date": "2025-02-23",
+      "matched_days": 3,
+      "difference": 0.17285205970451223
+    },
+    {
+      "event_id": "EV-MM25",
+      "name": "College basketball tournament opening rounds",
+      "start_date": "2025-03-20",
+      "end_date": "2025-03-23",
+      "matched_days": 4,
+      "difference": 0.1813452848879793
+    },
+    {
+      "event_id": "EV-CC25",
+      "name": "CinemaCon",
+      "start_date": "2025-03-31",
+      "end_date": "2025-04-03",
+      "matched_days": 4,
+      "difference": 0.010360525119103903
+    },
+    {
+      "event_id": "EV-NAB25",
+      "name": "NAB Show",
+      "start_date": "2025-04-05",
+      "end_date": "2025-04-09",
+      "matched_days": 5,
+      "difference": 0.026215025258433666
+    },
+    {
+      "event_id": "EV-EDC25",
+      "name": "EDC Las Vegas festival weekend",
+      "start_date": "2025-05-16",
+      "end_date": "2025-05-18",
+      "matched_days": 3,
+      "difference": 0.15913930647157648
+    },
+    {
+      "event_id": "EV-P-LOCALS",
+      "name": "Gilded Ace Locals Appreciation Week",
+      "start_date": "2025-06-09",
+      "end_date": "2025-06-15",
+      "matched_days": 7,
+      "difference": 0.07509435377892992
+    }
+  ]
+}

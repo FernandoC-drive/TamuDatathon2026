@@ -1,0 +1,567 @@
+{
+  "tracked": {
+    "wagering_guests": 96559,
+    "coin_in_usd": 163804869.65,
+    "payout_usd": 148219409.05,
+    "house_win_usd": 15585460.6,
+    "theo_usd": 15485020.9805,
+    "guests_ahead": 15504
+  },
+  "outcomes": [
+    {
+      "scope": "Carded",
+      "coin_in_usd": 163804869.65,
+      "payout_usd": 148219409.05,
+      "house_win_usd": 15585460.6,
+      "theo_usd": 15485020.9805
+    },
+    {
+      "scope": "Uncarded",
+      "coin_in_usd": 85100349.6,
+      "payout_usd": 77047655.1,
+      "house_win_usd": 8052694.5,
+      "theo_usd": 8060343.498
+    }
+  ],
+  "visits": {
+    "recorded_visits": 351729,
+    "incomplete": 11,
+    "visits_with_sessions": 314572
+  },
+  "shares": [
+    {
+      "cutoff": 0.01,
+      "top_players": 966.0,
+      "wager_share": 0.20413586465071246,
+      "net_house_win_share": 0.23874260732467542,
+      "net_house_win_share_top_wagerers": 0.19796689229704256
+    },
+    {
+      "cutoff": 0.05,
+      "top_players": 4828.0,
+      "wager_share": 0.5206002869890871,
+      "net_house_win_share": 0.5882419413385832,
+      "net_house_win_share_top_wagerers": 0.5095347903930411
+    },
+    {
+      "cutoff": 0.1,
+      "top_players": 9656.0,
+      "wager_share": 0.6397222165855189,
+      "net_house_win_share": 0.75370331050723,
+      "net_house_win_share_top_wagerers": 0.6381319875782175
+    },
+    {
+      "cutoff": 0.2,
+      "top_players": 19312.0,
+      "wager_share": 0.7501315947599485,
+      "net_house_win_share": 0.9458605894521975,
+      "net_house_win_share_top_wagerers": 0.769940289733882
+    }
+  ],
+  "gini": {
+    "wager_gini": 0.7093493970871797,
+    "positive_loss_gini": 0.6843950640524921
+  },
+  "lorenz": [
+    {
+      "guest_share": 0.010004246108596817,
+      "wager_share": 3.904310057243771e-05,
+      "positive_loss_share": 0.0
+    },
+    {
+      "guest_share": 0.020008492217193634,
+      "wager_share": 0.00021725086730350448,
+      "positive_loss_share": 0.0
+    },
+    {
+      "guest_share": 0.03000238196335919,
+      "wager_share": 0.0004947938982105835,
+      "positive_loss_share": 0.0
+    },
+    {
+      "guest_share": 0.040006628071956006,
+      "wager_share": 0.0008559382288180954,
+      "positive_loss_share": 0.0
+    },
+    {
+      "guest_share": 0.050000517818121565,
+      "wager_share": 0.001293404771498501,
+      "positive_loss_share": 0.0
+    },
+    {
+      "guest_share": 0.06000476392671838,
+      "wager_share": 0.0018046310261204128,
+      "positive_loss_share": 0.0
+    },
+    {
+      "guest_share": 0.07000901003531519,
+      "wager_share": 0.002384898573740295,
+      "positive_loss_share": 0.0
+    },
+    {
+      "guest_share": 0.08000289978148076,
+      "wager_share": 0.0030302148590611207,
+      "positive_loss_share": 0.0
+    },
+    {
+      "guest_share": 0.09000714589007756,
+      "wager_share": 0.003740301502080527,
+      "positive_loss_share": 0.0
+    },
+    {
+      "guest_share": 0.10000103563624313,
+      "wager_share": 0.0045134091653056055,
+      "positive_loss_share": 0.0
+    },
+    {
+      "guest_share": 0.11000528174483994,
+      "wager_share": 0.005345059959882578,
+      "positive_loss_share": 0.0
+    },
+    {
+      "guest_share": 0.12000952785343676,
+      "wager_share": 0.006236904935628084,
+      "positive_loss_share": 0.0
+    },
+    {
+      "guest_share": 0.13000341759960232,
+      "wager_share": 0.007188658386750225,
+      "positive_loss_share": 0.0
+    },
+    {
+      "guest_share": 0.14000766370819914,
+      "wager_share": 0.00820061548151905,
+      "positive_loss_share": 0.0
+    },
+    {
+      "guest_share": 0.1500015534543647,
+      "wager_share": 0.009266848129993918,
+      "positive_loss_share": 0.0
+    },
+    {
+      "guest_share": 0.16000579956296151,
+      "wager_share": 0.010389732024673052,
+      "positive_loss_share": 0.0
+    },
+    {
+      "guest_share": 0.17001004567155834,
+      "wager_share": 0.011569174982704794,
+      "positive_loss_share": 5.3186752928222186e-05
+    },
+    {
+      "guest_share": 0.1800039354177239,
+      "wager_share": 0.012803962754473583,
+      "positive_loss_share": 0.0003333544330854116
+    },
+    {
+      "guest_share": 0.1900081815263207,
+      "wager_share": 0.01410009210919695,
+      "positive_loss_share": 0.0008592905672758805
+    },
+    {
+      "guest_share": 0.20000207127248626,
+      "wager_share": 0.015454425777506182,
+      "positive_loss_share": 0.0016180411223382927
+    },
+    {
+      "guest_share": 0.21000631738108308,
+      "wager_share": 0.01686684471532132,
+      "positive_loss_share": 0.0025415502643314045
+    },
+    {
+      "guest_share": 0.22000020712724863,
+      "wager_share": 0.01833543231295505,
+      "positive_loss_share": 0.0035933317947842076
+    },
+    {
+      "guest_share": 0.23000445323584545,
+      "wager_share": 0.019866727753291794,
+      "positive_loss_share": 0.004802378869575955
+    },
+    {
+      "guest_share": 0.24000869934444224,
+      "wager_share": 0.02145751715141394,
+      "positive_loss_share": 0.006149679504922212
+    },
+    {
+      "guest_share": 0.2500025890906078,
+      "wager_share": 0.023105643672785645,
+      "positive_loss_share": 0.00757142822246278
+    },
+    {
+      "guest_share": 0.26000683519920464,
+      "wager_share": 0.024817997527706588,
+      "positive_loss_share": 0.009113779585695442
+    },
+    {
+      "guest_share": 0.2700007249453702,
+      "wager_share": 0.026591331559965008,
+      "positive_loss_share": 0.010776874477192831
+    },
+    {
+      "guest_share": 0.280004971053967,
+      "wager_share": 0.028432234401524703,
+      "positive_loss_share": 0.012565366797532168
+    },
+    {
+      "guest_share": 0.29000921716256384,
+      "wager_share": 0.030338294646663457,
+      "positive_loss_share": 0.01446396243014233
+    },
+    {
+      "guest_share": 0.3000031069087294,
+      "wager_share": 0.032305097286221,
+      "positive_loss_share": 0.0164742707793276
+    },
+    {
+      "guest_share": 0.3100073530173262,
+      "wager_share": 0.034340246489735535,
+      "positive_loss_share": 0.01859385863590984
+    },
+    {
+      "guest_share": 0.32000124276349173,
+      "wager_share": 0.03643818991922137,
+      "positive_loss_share": 0.020823528314200975
+    },
+    {
+      "guest_share": 0.3300054888720886,
+      "wager_share": 0.03860443870509804,
+      "positive_loss_share": 0.02316335861292807
+    },
+    {
+      "guest_share": 0.3400097349806854,
+      "wager_share": 0.040835949897537124,
+      "positive_loss_share": 0.025609130218432863
+    },
+    {
+      "guest_share": 0.3500036247268509,
+      "wager_share": 0.043130452196541276,
+      "positive_loss_share": 0.028164455932959246
+    },
+    {
+      "guest_share": 0.3600078708354478,
+      "wager_share": 0.04549395122332372,
+      "positive_loss_share": 0.03083819703154163
+    },
+    {
+      "guest_share": 0.3700017605816133,
+      "wager_share": 0.0479233860188234,
+      "positive_loss_share": 0.033622638402448356
+    },
+    {
+      "guest_share": 0.3800060066902101,
+      "wager_share": 0.050424930086930414,
+      "positive_loss_share": 0.036526856226333115
+    },
+    {
+      "guest_share": 0.39001025279880697,
+      "wager_share": 0.052998819379116054,
+      "positive_loss_share": 0.03954514595292448
+    },
+    {
+      "guest_share": 0.4000041425449725,
+      "wager_share": 0.055645849659268665,
+      "positive_loss_share": 0.042677490867340954
+    },
+    {
+      "guest_share": 0.4100083886535693,
+      "wager_share": 0.05837026164380577,
+      "positive_loss_share": 0.04592951910896711
+    },
+    {
+      "guest_share": 0.42000227839973486,
+      "wager_share": 0.061166930332464634,
+      "positive_loss_share": 0.049297288353609504
+    },
+    {
+      "guest_share": 0.4300065245083317,
+      "wager_share": 0.0640440102447223,
+      "positive_loss_share": 0.05278579396299598
+    },
+    {
+      "guest_share": 0.44000041425449726,
+      "wager_share": 0.06699474852883289,
+      "positive_loss_share": 0.05638517176920223
+    },
+    {
+      "guest_share": 0.45000466036309406,
+      "wager_share": 0.0700290282853627,
+      "positive_loss_share": 0.06011101914450652
+    },
+    {
+      "guest_share": 0.4600089064716909,
+      "wager_share": 0.07314653389487923,
+      "positive_loss_share": 0.06395402828775446
+    },
+    {
+      "guest_share": 0.47000279621785646,
+      "wager_share": 0.07634534386383549,
+      "positive_loss_share": 0.06791863819390394
+    },
+    {
+      "guest_share": 0.48000704232645325,
+      "wager_share": 0.0796332629052582,
+      "positive_loss_share": 0.07201859088338701
+    },
+    {
+      "guest_share": 0.4900009320726188,
+      "wager_share": 0.08300483239021948,
+      "positive_loss_share": 0.07624857102388709
+    },
+    {
+      "guest_share": 0.5000051781812156,
+      "wager_share": 0.08646642300844443,
+      "positive_loss_share": 0.08061319669837823
+    },
+    {
+      "guest_share": 0.5100094242898124,
+      "wager_share": 0.09001635288075209,
+      "positive_loss_share": 0.0851123652297312
+    },
+    {
+      "guest_share": 0.520003314035978,
+      "wager_share": 0.09365889538437175,
+      "positive_loss_share": 0.08974211996671132
+    },
+    {
+      "guest_share": 0.5300075601445748,
+      "wager_share": 0.09740424740785476,
+      "positive_loss_share": 0.0945133852782979
+    },
+    {
+      "guest_share": 0.5400014498907404,
+      "wager_share": 0.1012416699542241,
+      "positive_loss_share": 0.09942548301787023
+    },
+    {
+      "guest_share": 0.5500056959993372,
+      "wager_share": 0.10518235530368433,
+      "positive_loss_share": 0.10449200238408653
+    },
+    {
+      "guest_share": 0.560009942107934,
+      "wager_share": 0.10923269307091689,
+      "positive_loss_share": 0.10971052449480996
+    },
+    {
+      "guest_share": 0.5700038318540995,
+      "wager_share": 0.11338724843580984,
+      "positive_loss_share": 0.11507644320626757
+    },
+    {
+      "guest_share": 0.5800080779626964,
+      "wager_share": 0.11766204717345533,
+      "positive_loss_share": 0.12060175741553508
+    },
+    {
+      "guest_share": 0.5900019677088619,
+      "wager_share": 0.12204565464211155,
+      "positive_loss_share": 0.12628727182476462
+    },
+    {
+      "guest_share": 0.6000062138174588,
+      "wager_share": 0.12655615302704157,
+      "positive_loss_share": 0.13215633712340963
+    },
+    {
+      "guest_share": 0.6100001035636243,
+      "wager_share": 0.13117689386104278,
+      "positive_loss_share": 0.13818907692952812
+    },
+    {
+      "guest_share": 0.6200043496722212,
+      "wager_share": 0.135927556351497,
+      "positive_loss_share": 0.14439392270691603
+    },
+    {
+      "guest_share": 0.6300085957808179,
+      "wager_share": 0.14080660544025528,
+      "positive_loss_share": 0.15078667479426983
+    },
+    {
+      "guest_share": 0.6400024855269835,
+      "wager_share": 0.14581049605566473,
+      "positive_loss_share": 0.1573540185945559
+    },
+    {
+      "guest_share": 0.6500067316355803,
+      "wager_share": 0.15095739768198033,
+      "positive_loss_share": 0.16412890869056856
+    },
+    {
+      "guest_share": 0.6600006213817459,
+      "wager_share": 0.15624361171121018,
+      "positive_loss_share": 0.171099823753275
+    },
+    {
+      "guest_share": 0.6700048674903427,
+      "wager_share": 0.16168955847644423,
+      "positive_loss_share": 0.17828462960315686
+    },
+    {
+      "guest_share": 0.6800091135989396,
+      "wager_share": 0.16728352007207864,
+      "positive_loss_share": 0.18568925047178528
+    },
+    {
+      "guest_share": 0.6900030033451051,
+      "wager_share": 0.17302864506140767,
+      "positive_loss_share": 0.19331773136048286
+    },
+    {
+      "guest_share": 0.7000072494537019,
+      "wager_share": 0.17894627285886672,
+      "positive_loss_share": 0.20119019937441404
+    },
+    {
+      "guest_share": 0.7100011391998674,
+      "wager_share": 0.18503090790133905,
+      "positive_loss_share": 0.20930586652630814
+    },
+    {
+      "guest_share": 0.7200053853084643,
+      "wager_share": 0.1913111589231682,
+      "positive_loss_share": 0.2176961018730574
+    },
+    {
+      "guest_share": 0.7300096314170611,
+      "wager_share": 0.19778839309982624,
+      "positive_loss_share": 0.22636394035957402
+    },
+    {
+      "guest_share": 0.7400035211632267,
+      "wager_share": 0.2044739147350495,
+      "positive_loss_share": 0.23531114898761626
+    },
+    {
+      "guest_share": 0.7500077672718235,
+      "wager_share": 0.21140437628009184,
+      "positive_loss_share": 0.24456077041525
+    },
+    {
+      "guest_share": 0.760001657017989,
+      "wager_share": 0.21855567924503394,
+      "positive_loss_share": 0.2541175850985838
+    },
+    {
+      "guest_share": 0.7700059031265858,
+      "wager_share": 0.22596544980065553,
+      "positive_loss_share": 0.26402917552956345
+    },
+    {
+      "guest_share": 0.7800101492351826,
+      "wager_share": 0.233642104973892,
+      "positive_loss_share": 0.27429928106596413
+    },
+    {
+      "guest_share": 0.7900040389813482,
+      "wager_share": 0.2415933981972434,
+      "positive_loss_share": 0.2849385896805841
+    },
+    {
+      "guest_share": 0.800008285089945,
+      "wager_share": 0.24987714979082737,
+      "positive_loss_share": 0.2959964747455297
+    },
+    {
+      "guest_share": 0.8100021748361106,
+      "wager_share": 0.2584944830423727,
+      "positive_loss_share": 0.3074897538194286
+    },
+    {
+      "guest_share": 0.8200064209447073,
+      "wager_share": 0.2674969232820973,
+      "positive_loss_share": 0.3194604481143681
+    },
+    {
+      "guest_share": 0.830000310690873,
+      "wager_share": 0.27688882966001616,
+      "positive_loss_share": 0.33194241242890316
+    },
+    {
+      "guest_share": 0.8400045567994697,
+      "wager_share": 0.28673510928189916,
+      "positive_loss_share": 0.34498588930897817
+    },
+    {
+      "guest_share": 0.8500088029080666,
+      "wager_share": 0.29710858782152205,
+      "positive_loss_share": 0.358649984963412
+    },
+    {
+      "guest_share": 0.8600026926542321,
+      "wager_share": 0.3080472861265758,
+      "positive_loss_share": 0.37294439641131394
+    },
+    {
+      "guest_share": 0.870006938762829,
+      "wager_share": 0.3196992623717154,
+      "positive_loss_share": 0.38797504346889994
+    },
+    {
+      "guest_share": 0.8800008285089945,
+      "wager_share": 0.3321695476224812,
+      "positive_loss_share": 0.40387302572744294
+    },
+    {
+      "guest_share": 0.8900050746175913,
+      "wager_share": 0.34564315744077145,
+      "positive_loss_share": 0.4208280117229869
+    },
+    {
+      "guest_share": 0.9000093207261881,
+      "wager_share": 0.3602936617580587,
+      "positive_loss_share": 0.43902931897906433
+    },
+    {
+      "guest_share": 0.9100032104723537,
+      "wager_share": 0.37643286815435645,
+      "positive_loss_share": 0.4587049981753199
+    },
+    {
+      "guest_share": 0.9200074565809505,
+      "wager_share": 0.39470280882458486,
+      "positive_loss_share": 0.48020606182322234
+    },
+    {
+      "guest_share": 0.9300013463271161,
+      "wager_share": 0.41626210988532725,
+      "positive_loss_share": 0.5039140533592171
+    },
+    {
+      "guest_share": 0.9400055924357129,
+      "wager_share": 0.4434613049368523,
+      "positive_loss_share": 0.5307297258080571
+    },
+    {
+      "guest_share": 0.9500098385443096,
+      "wager_share": 0.4794429214333189,
+      "positive_loss_share": 0.5622003041148521
+    },
+    {
+      "guest_share": 0.9600037282904752,
+      "wager_share": 0.5277283449185908,
+      "positive_loss_share": 0.6009552922503785
+    },
+    {
+      "guest_share": 0.970007974399072,
+      "wager_share": 0.5919964159624725,
+      "positive_loss_share": 0.6519761594881077
+    },
+    {
+      "guest_share": 0.9800018641452376,
+      "wager_share": 0.6776089183866335,
+      "positive_loss_share": 0.7225266847173218
+    },
+    {
+      "guest_share": 0.9900061102538344,
+      "wager_share": 0.7960105446108146,
+      "positive_loss_share": 0.8224271975038587
+    },
+    {
+      "guest_share": 1.0,
+      "wager_share": 1.0,
+      "positive_loss_share": 1.0
+    }
+  ]
+}

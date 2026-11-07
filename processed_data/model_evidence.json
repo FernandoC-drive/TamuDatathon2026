@@ -1,0 +1,110 @@
+{
+  "training_days": 120,
+  "holdout_days": 61,
+  "metrics": {
+    "constant_baseline": {
+      "mae_usd": 218258.0969262295,
+      "rmse_usd": 251436.49525999752
+    },
+    "weekday_baseline": {
+      "mae_usd": 68698.55169827497,
+      "rmse_usd": 86421.66282450434
+    },
+    "model": {
+      "mae_usd": 54459.207274746135,
+      "rmse_usd": 77935.74037803324
+    }
+  },
+  "candidate_scores": [
+    {
+      "alpha": 0.5,
+      "trend": false,
+      "mae_usd": 63302.23351598165,
+      "rmse_usd": 108671.53301114238
+    },
+    {
+      "alpha": 2.0,
+      "trend": false,
+      "mae_usd": 80308.80815020982,
+      "rmse_usd": 128039.27547714948
+    },
+    {
+      "alpha": 8.0,
+      "trend": false,
+      "mae_usd": 127543.49184109127,
+      "rmse_usd": 178600.44313505254
+    },
+    {
+      "alpha": 2.0,
+      "trend": true,
+      "mae_usd": 78913.1645182318,
+      "rmse_usd": 129282.13948490207
+    },
+    {
+      "alpha": 8.0,
+      "trend": true,
+      "mae_usd": 129001.06314649382,
+      "rmse_usd": 179066.28595635417
+    }
+  ],
+  "selected": {
+    "alpha": 0.5,
+    "trend": false,
+    "mae_usd": 63302.23351598165,
+    "rmse_usd": 108671.53301114238
+  },
+  "deployment": "model",
+  "july_weekdays": [
+    {
+      "weekday": "Saturday",
+      "dates": 4,
+      "forecast_usd_per_day": 1764358.210967719,
+      "weekday_baseline_usd_per_day": 1820595.1852941175
+    },
+    {
+      "weekday": "Friday",
+      "dates": 4,
+      "forecast_usd_per_day": 1599725.7291043645,
+      "weekday_baseline_usd_per_day": 1655737.2029411765
+    },
+    {
+      "weekday": "Sunday",
+      "dates": 4,
+      "forecast_usd_per_day": 1415292.1262472218,
+      "weekday_baseline_usd_per_day": 1465879.0823529414
+    },
+    {
+      "weekday": "Thursday",
+      "dates": 4,
+      "forecast_usd_per_day": 1273482.2816927107,
+      "weekday_baseline_usd_per_day": 1290980.4529411765
+    },
+    {
+      "weekday": "Monday",
+      "dates": 4,
+      "forecast_usd_per_day": 1213371.2783454242,
+      "weekday_baseline_usd_per_day": 1212138.3205882353
+    },
+    {
+      "weekday": "Wednesday",
+      "dates": 5,
+      "forecast_usd_per_day": 1151387.0114445412,
+      "weekday_baseline_usd_per_day": 1149981.0444444446
+    },
+    {
+      "weekday": "Tuesday",
+      "dates": 5,
+      "forecast_usd_per_day": 1115486.5178128006,
+      "weekday_baseline_usd_per_day": 1112941.95
+    }
+  ],
+  "event_types": [
+    "convention",
+    "sports_viewing",
+    "festival",
+    "property_promotion"
+  ],
+  "excluded_holdout_events": [
+    "Gilded Ace Locals Appreciation Week"
+  ]
+}
